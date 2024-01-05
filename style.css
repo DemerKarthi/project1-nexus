@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 550px;
+    border: 2px solid rgba(129, 190, 226, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(16px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.form-box .bx-user-pin {
+    color: rgb(129, 190, 226);
+    position: absolute;
+    top: 12%;
+    left: 43%;
+    font-size: 65px;
+}
+
+.form-box h2 {
+    color: rgb(129, 190, 226);
+    text-align: center;
+    font-size: 30px;
+}
+
+.form-box .input-box {
+    position: relative;
+    margin: 25px 0;
+    width: 310px;
+    border-bottom: 2px solid rgb(129, 190, 226);
+}
+
+i {
+    color: rgb(129, 190, 226);
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 19px;
+}
+
+.form-box .input-box input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    color: rgb(129, 190, 226);
+    padding: 0 20px 0 2px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+input::placeholder {
+    color: lightgrey;
+}
+
+.error {
+    position: relative;
+    color: rgb(231, 53, 53);
+    font-weight: 500;
+}
+
+.error span {
+    position: relative;
+    padding: 23px;
+    top: 0px;
+    font-size: 16px;
+}
+
+.btn {
+    background: rgb(129, 190, 226);
+    color: #0f0c29;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    height: 40px;
+    box-shadow: 3px 0 5px rgba(129, 190, 226, .4);
+}
+
+.btn:active {
+    transform: scale(.98) translateY(7px);
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.group span a {
+    color: rgb(129, 190, 226);
+    position: relative;
+    top: 10px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.group a:focus {
+    text-decoration: underline;
+}
+
+.popup {
+    background: #302b63;
+    position: absolute;
+    text-align: center;
+    width: 390px;
+    height: 290px;
+    color: #daebda;
+    border: 1px solid rgb(129, 190, 226);
+    border-radius: 25px;
+    padding: 0 30px 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .3s, top 0.3s;
+    visibility: hidden;
+}
+
+.popup ion-icon {
+    padding: 12px;
+    font-size: 70px;
+    color: #00ff00;
+}
+
+.popup button {
+    position: absolute;
+    width: 150px;
+    height: 43px;
+    bottom: 50px;
+    left: 130px;
+    border-radius: 15px;
+    box-shadow: 0 5px 0 rgb(73, 135, 170);
+    outline: none;
+    border: none;
+    font-size: 17px;
+    color: #0f0c29;
+    background: rgb(129, 190, 226);
+    cursor: pointer;
+}
+
+.popup button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.open-slide {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
